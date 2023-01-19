@@ -1,5 +1,18 @@
 function recursiveSearch(arr, target) {
-  // type your code here
+
+  // if array is empty, return false
+  if (arr.length === 0) {
+    return false;
+  }
+
+  // if element equal target, return true
+  if (arr[0] === target) {
+    return true;
+  }
+
+  // call recursive function
+  return recursiveSearch(arr.slice(1), target);
+
 }
 
 if (require.main === module) {
